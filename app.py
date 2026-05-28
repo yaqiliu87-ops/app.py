@@ -213,7 +213,7 @@ with tab_relation:
 
         st.subheader("相关性矩阵")
         corr = df[numeric_columns].corr(numeric_only=True).round(3)
-        st.dataframe(corr.style.background_gradient(cmap="RdYlGn", axis=None), use_container_width=True)
+        st.dataframe(corr, use_container_width=True)
     else:
         st.info("至少需要两个数值字段才能分析相关性。")
 
